@@ -5,12 +5,12 @@ import 'react-day-picker/dist/style.css';
 
 const Banner = ({date, setDate}) => {
     return (
-        <div class="hero min-h-screen md:px-10" style={{
+        <div className="hero min-h-screen md:px-10" style={{
             background: `url(${bg})`
         }}>
-            <div class="hero-content flex-col lg:flex-row-reverse gap-16">
+            <div className="hero-content flex-col lg:flex-row-reverse gap-16">
                 <div>
-                <img src={chair} class="max-w-sm rounded-lg shadow-2xl"/>
+                <img src={chair} className="max-w-sm rounded-lg shadow-2xl"/>
                 </div>
                 <div className=''>
                     <DayPicker className='bg-white'

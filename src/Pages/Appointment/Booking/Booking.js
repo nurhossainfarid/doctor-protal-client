@@ -1,17 +1,28 @@
 import { format } from 'date-fns';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { useQuery } from 'react-query';
+import Loading from '../../Home/Shared/Loading';
 import Book from './Book';
 import BookingModal from './BookingModal';
 
 const Booking = ({ date }) => {
-    const [booking, setBooking] = useState([]);
+    // const [booking, setBooking] = useState([]);
     const [treatment, setTreatment] = useState(null);
+    const formatData = format(date, 'PP')
 
-    useEffect(() => {
-        fetch('http://localhost:5000/services')
-            .then(res => res.json())
-            .then(data => setBooking(data))
-    }, []);
+    const { isLoading, refetch, data: booking } = useQuery(['available', formatData], () =>
+    fetch(`http://localhost:5000/available?date=${formatData}`)
+    .then(res => res.json())
+    )
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
+    // useEffect(() => {
+    //     fetch(`http://localhost:5000/available?date=${formatData}`)
+    //         .then(res => res.json())
+    //         .then(data => setBooking(data))
+    // }, []);
 
     return (
         <div className='mt-32'>
@@ -22,7 +33,7 @@ const Booking = ({ date }) => {
                 }
             </div>
             <div>
-                {treatment && <BookingModal treatment={treatment} date={date} setTreatment={setTreatment}></BookingModal>}
+                {treatment && <BookingModal treatment={treatment} date={date} setTreatment={setTreatment} refetch={refetch}></BookingModal>}
             </div>
         </div>
     );

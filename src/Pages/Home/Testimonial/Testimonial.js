@@ -17,12 +17,12 @@ const Testimonial = () => {
                 </div>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-3 my-16'>
-                <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body items-center text-center">
+                <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body items-center text-center">
                         <p>It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</p>
                         <div className='flex items-center gap-3'>
-                            <div class="avatar">
-                                <div class="w-16 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
+                            <div className="avatar">
+                                <div className="w-16 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
                                     <img className='' src={avatar} />
                                 </div>
                             </div>
@@ -33,12 +33,12 @@ const Testimonial = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body items-center text-center">
+                <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body items-center text-center">
                         <p>It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</p>
                         <div className='flex items-center gap-3'>
-                            <div class="avatar">
-                                <div class="w-16 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
+                            <div className="avatar">
+                                <div className="w-16 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
                                     <img src={avatar2} />
                                 </div>
                             </div>
@@ -49,12 +49,12 @@ const Testimonial = () => {
                         </div>
                     </div>
                 </div>
-                <div class="card bg-base-100 shadow-xl">
-                    <div class="card-body items-center text-center">
+                <div className="card bg-base-100 shadow-xl">
+                    <div className="card-body items-center text-center">
                         <p>It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content</p>
                         <div className='flex mt-5 items-center gap-3'>
-                            <div class="avatar">
-                                <div class="w-16 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
+                            <div className="avatar">
+                                <div className="w-16 rounded-full ring ring-secondary ring-offset-base-100 ring-offset-2">
                                     <img src={avatar3} />
                                 </div>
                             </div>

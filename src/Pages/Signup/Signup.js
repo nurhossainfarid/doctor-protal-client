@@ -42,7 +42,7 @@ const Signup = () => {
         return <Loading></Loading>
     }
 
-    if (user || gUser) {
+    if (token) {
         navigate('/appointment')
     }
 
